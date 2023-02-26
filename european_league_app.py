@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 from google.oauth2 import service_account
 from google.cloud import storage
+from PIL import Image
 from io import BytesIO
 
 # Create API client.
@@ -74,6 +75,9 @@ with st.sidebar:
     st.markdown('GA : Goal Against')
     st.markdown('GD : Goal Difference')
     st.markdown('Pts : Points')   
-    st.markdown('Pts/MP : Average Points per Match')           
+    st.markdown('Pts/MP : Average Points per Match')   
+
+flag = Image.open(f'flag_images/{country}.png')        
+st.image(flag)
 
 st.table(df_teams_country)
