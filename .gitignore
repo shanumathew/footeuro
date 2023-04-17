@@ -1,2 +1,2 @@
-*.toml
+secrets.toml
 .streamlit
